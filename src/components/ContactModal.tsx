@@ -9,14 +9,14 @@ interface ContactModalProps {
   initialSubject?: string;
 }
 
-export default function ContactModal({ isOpen, onClose, initialSubject = " }: ContactModalProps) {
+export default function ContactModal({ isOpen, onClose, initialSubject = "" }: ContactModalProps) {
   const [formData, setFormData] = useState({
-    fullName: ",
-    phone: ",
-    email: ",
-    address: ",
+    fullName: "",
+    phone: "",
+    email: "",
+    address: "",
     serviceType: "Tree Care & Pruning",
-    message: ",
+    message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 

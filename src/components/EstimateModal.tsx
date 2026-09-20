@@ -9,18 +9,18 @@ interface EstimateModalProps {
   initialService?: string;
 }
 
-export default function EstimateModal({ isOpen, onClose, initialService = " }: EstimateModalProps) {
+export default function EstimateModal({ isOpen, onClose, initialService = "" }: EstimateModalProps) {
   const [step, setStep] = useState(1);
   const [propertyType, setPropertyType] = useState<"commercial" | "residential" | "hoa">("commercial");
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [formData, setFormData] = useState({
-    fullName: ",
-    companyName: ",
-    phone: ",
-    email: ",
-    address: ",
-    zipCode: ",
-    propertyDetails: ",
+    fullName: "",
+    companyName: "",
+    phone: "",
+    email: "",
+    address: "",
+    zipCode: "",
+    propertyDetails: "",
     urgency: "standard",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);

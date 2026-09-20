@@ -18,7 +18,7 @@ interface DistrictInfo {
   responseTime: string;
 }
 
-export default function ServiceArea({ searchedZip = ", onOpenContact }: ServiceAreaProps) {
+export default function ServiceArea({ searchedZip = "", onOpenContact }: ServiceAreaProps) {
   const [inputZip, setInputZip] = useState(searchedZip);
   const [selectedState, setSelectedState] = useState("all");
   const [foundDistrict, setFoundDistrict] = useState<DistrictInfo | null>({
@@ -203,7 +203,7 @@ export default function ServiceArea({ searchedZip = ", onOpenContact }: ServiceA
                 </div>
                 <div className="text-base font-bold text-[var(--text-charcoal)] mb-2">{region.name}</div>
                 <a
-                  href={`tel:${region.phone.replace(/\D/g, ")}`}
+                  href={`tel:${region.phone.replace(/\D/g, "")}`}
                   className="text-sm font-bold text-[#216F48] hover:text-[#103B26] flex items-center space-x-1.5"
                 >
                   <Phone className="w-4 h-4" />
