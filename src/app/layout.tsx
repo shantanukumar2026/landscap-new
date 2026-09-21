@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   description:
     "Professional landscape management and certified tree care services for residential estates, commercial properties, and communities nationwide.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.svg",
+    apple: "/apple-icon.svg",
   },
   openGraph: {
     title: "ABC Landscape | Professional Tree Care & Landscape Services",

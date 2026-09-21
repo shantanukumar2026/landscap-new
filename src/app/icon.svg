@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#16A34A"/>
+  <g transform="translate(16, 15)" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Tree trunk -->
+    <line x1="0" y1="3" x2="0" y2="10"/>
+    <!-- Tree canopy layers -->
+    <path d="M0,-10 L-6,-2 L-3,-2 L-7,4 L-3,4 L-8,10 L8,10 L3,4 L7,4 L3,-2 L6,-2 Z"/>
+  </g>
+</svg>
