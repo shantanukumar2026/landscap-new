@@ -59,14 +59,14 @@ export default function HomePage() {
       {/* <FinalCTA onOpenContact={handleOpenContact} /> */}
 
       {/* Substantial Corporate Footer */}
-      {/* <Footer onOpenContact={handleOpenContact} /> */}
+      <Footer onOpenContact={handleOpenContact} />
 
       {/* Accessible Contact Modal */}
-      {/* <ContactModal
+      <ContactModal
         isOpen={isContactModalOpen}
         onClose={() => setIsContactModalOpen(false)}
         initialSubject={selectedContactSubject}
-      /> */}
+      />
     </main>
   );
 }
