@@ -88,7 +88,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
                 ABC<span className="text-[#1B5E3B] font-light">LANDSCAPE</span>
               </span>
               <span className="text-[10px] sm:text-xs tracking-wider uppercase font-bold text-[#3D4A41] block mt-0.5">
-                Tree Care &amp; Landscape Management
+                Tree Care & Landscape Management
               </span>
             </div>
           </a>
@@ -100,13 +100,15 @@ export default function Header({ onOpenContact }: HeaderProps) {
               <button
                 type="button"
                 onClick={() => setActiveMegaMenu(!activeMegaMenu)}
+                aria-expanded={activeMegaMenu}
+                aria-haspopup="true"
                 className={`px-4 py-2 rounded-sm flex items-center space-x-1.5 transition-all duration-200 ${activeMegaMenu
                     ? "bg-[#F4FAF6] text-[var(--corporate-green)]"
                     : "hover:bg-[#F4FAF6] hover:text-[var(--corporate-green)]"
                   }`}
               >
                 <span>Services</span>
-                <ChevronDown className="w-4 h-4 opacity-80" />
+                <ChevronDown className={`w-4 h-4 opacity-80 transition-transform duration-200 ${activeMegaMenu ? "rotate-180" : ""}`} />
               </button>
             </div>
 
@@ -130,12 +132,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
             >
               Resources
             </a>
-            <a
-              href="#blog"
-              className="px-4 py-2 rounded-sm hover:text-[var(--corporate-green)] hover:bg-[#F4FAF6] transition-all duration-200"
-            >
-              Blog
-            </a>
+
           </nav>
 
           {/* Action CTAs */}
@@ -365,7 +362,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
                   onClick={() => setMobileMenuOpen(false)}
                   className="block py-2.5 text-xl font-bold text-[var(--text-charcoal)] hover:text-[var(--corporate-green)]"
                 >
-                  Company Blog
+                  Property Resources
                 </a>
               </div>
 
@@ -391,17 +388,6 @@ export default function Header({ onOpenContact }: HeaderProps) {
               >
                 Explore Services
               </a>
-              {/* <button
-                type="button"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenContact("Mobile Inquiry");
-                }}
-                className="w-full bg-[var(--corporate-green)] text-white py-4 rounded-sm font-bold text-base text-center shadow flex items-center justify-center space-x-2 hover:bg-[#1E6B3E]"
-              >
-                <span>Contact Our Team</span>
-                <ArrowRight className="w-5 h-5" />
-              </button> */}
             </div>
           </div>
         </div>

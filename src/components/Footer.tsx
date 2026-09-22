@@ -71,7 +71,7 @@ export default function Footer({ onOpenContact }: FooterProps) {
                   ABC<span className="text-[#1B5E3B] font-light">LANDSCAPE</span>
                 </span>
                 <span className="text-[10px] uppercase tracking-wider font-bold text-[#3D4A41] block mt-0.5">
-                  Tree Care &amp; Landscape Management
+                  Tree Care & Landscape Management
                 </span>
               </div>
             </a>
@@ -82,9 +82,9 @@ export default function Footer({ onOpenContact }: FooterProps) {
             </p>
 
             {/* Contact details */}
-            <div className="space-y-3 text-sm">
+            <div className="space-y-4 text-sm">
               <div className="flex items-start space-x-3 group">
-                <div className="w-7 h-7 rounded-sm bg-white/10 border border-white/20 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-white/20 transition-colors">
+                <div className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-white/20 transition-colors">
                   <MapPin className="w-4 h-4 text-[#8DE0AE]" />
                 </div>
                 <span className="text-white font-medium leading-snug">
@@ -93,7 +93,7 @@ export default function Footer({ onOpenContact }: FooterProps) {
               </div>
 
               <div className="flex items-center space-x-3 group">
-                <div className="w-7 h-7 rounded-sm bg-white/10 border border-white/20 flex items-center justify-center shrink-0 group-hover:bg-white/20 transition-colors">
+                <div className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shrink-0 group-hover:bg-white/20 transition-colors">
                   <Phone className="w-4 h-4 text-[#8DE0AE]" />
                 </div>
                 <a href="tel:16319432157" className="text-white font-extrabold hover:text-[#8DE0AE] transition-colors text-base">
@@ -102,7 +102,7 @@ export default function Footer({ onOpenContact }: FooterProps) {
               </div>
 
               <div className="flex items-center space-x-3 group">
-                <div className="w-7 h-7 rounded-sm bg-white/10 border border-white/20 flex items-center justify-center shrink-0 group-hover:bg-white/20 transition-colors">
+                <div className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shrink-0 group-hover:bg-white/20 transition-colors">
                   <Mail className="w-4 h-4 text-[#8DE0AE]" />
                 </div>
                 <a href="mailto:nick@aptreescorp.com" className="text-white font-bold hover:text-[#8DE0AE] transition-colors">
@@ -111,44 +111,44 @@ export default function Footer({ onOpenContact }: FooterProps) {
               </div>
 
               <div className="flex items-center space-x-3 group">
-                <div className="w-7 h-7 rounded-sm bg-white/10 border border-white/20 flex items-center justify-center shrink-0 group-hover:bg-white/20 transition-colors">
+                <div className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center shrink-0 group-hover:bg-white/20 transition-colors">
                   <Clock className="w-4 h-4 text-[#8DE0AE]" />
                 </div>
                 <span className="text-white/90 font-medium">
-                  Mon – Fri : 8:00 AM to 6:00 PM EST
+                  Mon – Fri · 8:00 AM to 6:00 PM EST
                 </span>
               </div>
             </div>
 
             {/* Social icons */}
             <div className="pt-1">
-              <span className="text-[10px] font-extrabold uppercase tracking-widest text-white/80 block mb-2.5">
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#8DE0AE] block mb-3">
                 FOLLOW US
               </span>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2.5">
                 {/* LinkedIn */}
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
-                  className="w-8 h-8 rounded-sm bg-white/15 border border-white/25 flex items-center justify-center text-white/90 hover:text-white hover:bg-white/30 transition-all">
+                  className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white/90 hover:text-white hover:bg-white/25 transition-all">
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.4 1.4 0 1 0-.01-2.8 1.4 1.4 0 0 0 .01 2.8m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
                 </a>
                 {/* X / Twitter */}
                 <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X Twitter"
-                  className="w-8 h-8 rounded-sm bg-white/15 border border-white/25 flex items-center justify-center text-white/90 hover:text-white hover:bg-white/30 transition-all">
+                  className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white/90 hover:text-white hover:bg-white/25 transition-all">
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 </a>
                 {/* Instagram */}
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
-                  className="w-8 h-8 rounded-sm bg-white/15 border border-white/25 flex items-center justify-center text-white/90 hover:text-white hover:bg-white/30 transition-all">
+                  className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white/90 hover:text-white hover:bg-white/25 transition-all">
                   <svg className="w-4 h-4 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                 </a>
                 {/* Facebook */}
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
-                  className="w-8 h-8 rounded-sm bg-white/15 border border-white/25 flex items-center justify-center text-white/90 hover:text-white hover:bg-white/30 transition-all">
+                  className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white/90 hover:text-white hover:bg-white/25 transition-all">
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
                 </a>
                 {/* YouTube */}
                 <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
-                  className="w-8 h-8 rounded-sm bg-white/15 border border-white/25 flex items-center justify-center text-white/90 hover:text-white hover:bg-white/30 transition-all">
+                  className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white/90 hover:text-white hover:bg-white/25 transition-all">
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                 </a>
               </div>
@@ -167,9 +167,9 @@ export default function Footer({ onOpenContact }: FooterProps) {
               <li><a href="#services" className="hover:text-white transition-colors block">Landscape Maintenance</a></li>
               <li><a href="#services" className="hover:text-white transition-colors block">Certified Tree Care</a></li>
               <li><a href="#commercial" className="hover:text-white transition-colors block">Commercial Grounds</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors block">Storm &amp; Emergency</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors block">Storm & Emergency</a></li>
               <li><a href="#services" className="hover:text-white transition-colors block">Irrigation Management</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors block">Plant Health &amp; Soil</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors block">Plant Health & Soil</a></li>
             </ul>
           </div>
 
@@ -183,10 +183,10 @@ export default function Footer({ onOpenContact }: FooterProps) {
             </div>
             <ul className="space-y-3 text-sm font-semibold text-white/75">
               <li><a href="#commercial" className="hover:text-white transition-colors block">Corporate Office Parks</a></li>
-              <li><a href="#commercial" className="hover:text-white transition-colors block">HOAs &amp; Communities</a></li>
-              <li><a href="#commercial" className="hover:text-white transition-colors block">Retail &amp; Health Campuses</a></li>
-              <li><a href="#commercial" className="hover:text-white transition-colors block">Industrial &amp; Logistics</a></li>
-              <li><a href="#commercial" className="hover:text-white transition-colors block">Municipalities &amp; Govt</a></li>
+              <li><a href="#commercial" className="hover:text-white transition-colors block">HOAs & Communities</a></li>
+              <li><a href="#commercial" className="hover:text-white transition-colors block">Retail & Health Campuses</a></li>
+              <li><a href="#commercial" className="hover:text-white transition-colors block">Industrial & Logistics</a></li>
+              <li><a href="#commercial" className="hover:text-white transition-colors block">Municipalities & Govt</a></li>
               <li><a href="#commercial" className="hover:text-white transition-colors block">Educational Institutions</a></li>
             </ul>
           </div>
@@ -205,7 +205,7 @@ export default function Footer({ onOpenContact }: FooterProps) {
               <li><a href="#residential" className="hover:text-white transition-colors block">Residential Services</a></li>
               <li><a href="#why-us" className="hover:text-white transition-colors block">Why Choose Us</a></li>
               <li><a href="#resources" className="hover:text-white transition-colors block">Property Resources</a></li>
-              <li><a href="#blog" className="hover:text-white transition-colors block">Company Blog</a></li>
+              <li><a href="#service-area" className="hover:text-white transition-colors block">Service Areas</a></li>
             </ul>
           </div>
 
@@ -260,7 +260,7 @@ export default function Footer({ onOpenContact }: FooterProps) {
               <div className="flex items-center space-x-2 mb-2">
                 <ShieldCheck className="w-4 h-4 text-[#8DE0AE] shrink-0" />
                 <span className="text-[10px] font-extrabold uppercase tracking-wider text-white">
-                  ISA Certified &amp; OSHA Compliant
+                  ISA Certified & OSHA Compliant
                 </span>
               </div>
               <p className="text-[11px] leading-relaxed text-white/90 font-medium">
@@ -277,7 +277,7 @@ export default function Footer({ onOpenContact }: FooterProps) {
               <span className="text-white/50">•</span>
               <div className="flex items-center space-x-1.5 text-xs font-bold text-white">
                 <ShieldCheck className="w-4 h-4 text-[#8DE0AE]" />
-                <span>Licensed &amp; Insured</span>
+                <span>Licensed & Insured</span>
               </div>
             </div>
           </div>

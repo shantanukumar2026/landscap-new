@@ -118,7 +118,7 @@ export default function CommercialSection({ onOpenContact }: CommercialSectionPr
                       className={`w-full text-left px-4 py-3 rounded-sm text-base font-bold transition-all duration-150 flex items-center justify-between ${
                         isSelected
                           ? "bg-[var(--corporate-green)] text-white corporate-shadow"
-                          : "text-[var(--text-charcoal)] hover:bg-[#1E6B3E] hover:text-[var(--corporate-green)]"
+                          : "text-[var(--text-charcoal)] hover:bg-[#EBF4EE] hover:text-[var(--corporate-green)]"
                       }`}
                     >
                       <span className="flex items-center space-x-3">
@@ -160,7 +160,7 @@ export default function CommercialSection({ onOpenContact }: CommercialSectionPr
                 alt={propertyTypes[selectedPropertyIndex].title}
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
-                className="object-cover"
+                className="object-cover transition-all duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-white">
@@ -196,7 +196,7 @@ export default function CommercialSection({ onOpenContact }: CommercialSectionPr
                   </div>
                   <div className="flex items-center space-x-2.5 text-base text-[#1E2822] font-semibold">
                     <CheckSquare className="w-5 h-5 text-[#216F48] shrink-0" />
-                    <span>Comprehensive COI &amp; safety compliance</span>
+                    <span>Comprehensive COI & safety compliance</span>
                   </div>
                 </div>
               </div>

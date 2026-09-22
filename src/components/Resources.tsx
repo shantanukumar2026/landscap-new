@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { ArrowRight, Calendar, Clock, X } from "lucide-react";
 
@@ -17,6 +17,25 @@ interface Article {
 
 export default function Resources() {
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
+
+  // Escape key handler for modal
+  const handleEscapeKey = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelectedArticle(null);
+    },
+    []
+  );
+
+  useEffect(() => {
+    if (selectedArticle) {
+      document.addEventListener("keydown", handleEscapeKey);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.removeEventListener("keydown", handleEscapeKey);
+      document.body.style.overflow = "";
+    };
+  }, [selectedArticle, handleEscapeKey]);
 
   const articles: Article[] = [
     {
@@ -81,7 +100,7 @@ export default function Resources() {
         {/* Section Header */}
         <div className="max-w-3xl mb-14 lg:mb-18">
           <div className="text-sm font-extrabold uppercase tracking-widest text-[var(--corporate-green)] mb-3">
-            Property Advice &amp; Insights
+            Property Advice & Insights
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--text-charcoal)] tracking-tight leading-tight mb-5">
             Helpful advice for your property.
@@ -153,7 +172,13 @@ export default function Resources() {
 
       {/* Full Article Reader Modal */}
       {selectedArticle && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70"
+          role="dialog"
+          aria-modal="true"
+          aria-label={selectedArticle.title}
+          onClick={(e) => { if (e.target === e.currentTarget) setSelectedArticle(null); }}
+        >
           <div className="bg-[var(--bg-card)] text-[var(--text-charcoal)] w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-sm p-6 sm:p-8 shadow-2xl relative border border-stone-200">
             <button
               type="button"

@@ -56,7 +56,7 @@ export default function HomePage() {
       <Resources />
 
       {/* Final Call to Action */}
-      {/* <FinalCTA onOpenContact={handleOpenContact} /> */}
+      <FinalCTA onOpenContact={handleOpenContact} />
 
       {/* Substantial Corporate Footer */}
       <Footer onOpenContact={handleOpenContact} />

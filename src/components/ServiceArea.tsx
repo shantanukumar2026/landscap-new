@@ -67,7 +67,7 @@ export default function ServiceArea({ searchedZip = "", onOpenContact }: Service
         {/* Section Header */}
         <div className="max-w-3xl mb-14 lg:mb-18">
           <div className="text-sm font-extrabold uppercase tracking-widest text-[var(--corporate-green)] mb-3">
-            Service Area &amp; Locations
+            Service Area & Locations
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--text-charcoal)] tracking-tight leading-tight mb-5">
             Local service. Professional standards.

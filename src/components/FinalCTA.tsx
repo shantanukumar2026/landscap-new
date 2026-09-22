@@ -28,7 +28,7 @@ export default function FinalCTA({ onOpenContact }: FinalCTAProps) {
           {/* Eyebrow */}
           <div className="inline-flex items-center space-x-2 bg-[#216F48] text-[#EBF4EE] text-xs font-extrabold tracking-widest uppercase px-4 py-1.5 rounded-sm mb-6 hover:bg-[#1E6B3E]">
             <span className="w-2 h-2 rounded-full bg-[#86C5A2]" />
-            <span>EXPERT TREE &amp; LANDSCAPE ASSISTANCE</span>
+            <span>EXPERT TREE & LANDSCAPE ASSISTANCE</span>
           </div>
 
           {/* Headline */}
@@ -70,7 +70,7 @@ export default function FinalCTA({ onOpenContact }: FinalCTAProps) {
             </div>
             <div className="flex items-center justify-center space-x-2.5">
               <ShieldCheck className="w-5 h-5 text-[#86C5A2]" />
-              <span>Fully Certified &amp; Insured</span>
+              <span>Fully Certified & Insured</span>
             </div>
             <div className="flex items-center justify-center space-x-2.5">
               <span className="w-2.5 h-2.5 rounded-full bg-[#86C5A2]" />

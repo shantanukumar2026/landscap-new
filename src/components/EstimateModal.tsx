@@ -130,7 +130,7 @@ export default function EstimateModal({ isOpen, onClose, initialService = "" }: 
                 </span>
                 <span className="text-stone-300">→</span>
                 <span className={`font-bold ${step === 3 ? "text-[#143823]" : "text-[#8a968f]"}`}>
-                  3. Contact &amp; Schedule
+                  3. Contact & Schedule
                 </span>
               </div>
 
@@ -257,7 +257,7 @@ export default function EstimateModal({ isOpen, onClose, initialService = "" }: 
               {step === 3 && (
                 <div className="space-y-4">
                   <h4 className="text-sm font-bold uppercase tracking-wider text-[#2b332e]">
-                    Your Contact &amp; Property Information
+                    Your Contact & Property Information
                   </h4>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

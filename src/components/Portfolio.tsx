@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { ArrowRight, X, MapPin } from "lucide-react";
 
@@ -18,6 +18,25 @@ interface ProjectItem {
 
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState<ProjectItem | null>(null);
+
+  // Escape key handler for modal
+  const handleEscapeKey = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") setActiveProject(null);
+    },
+    []
+  );
+
+  useEffect(() => {
+    if (activeProject) {
+      document.addEventListener("keydown", handleEscapeKey);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.removeEventListener("keydown", handleEscapeKey);
+      document.body.style.overflow = "";
+    };
+  }, [activeProject, handleEscapeKey]);
 
   const projects: ProjectItem[] = [
     {
@@ -75,7 +94,7 @@ export default function Portfolio() {
             <div className="flex items-center space-x-3 mb-4">
               <span className="w-12 h-1 bg-[var(--corporate-green)] hover:bg-[#1E6B3E]"></span>
               <span className="text-sm font-bold uppercase tracking-widest text-[var(--corporate-green)]">
-                Case Studies &amp; Projects
+                Case Studies & Projects
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--text-charcoal)] tracking-tight leading-tight">
@@ -215,7 +234,13 @@ export default function Portfolio() {
 
       {/* Case Study Modal */}
       {activeProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70"
+          role="dialog"
+          aria-modal="true"
+          aria-label={activeProject.title}
+          onClick={(e) => { if (e.target === e.currentTarget) setActiveProject(null); }}
+        >
           <div className="bg-[var(--bg-card)] text-[var(--text-charcoal)] w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-sm p-6 sm:p-8 shadow-2xl relative border border-stone-200">
             <button
               type="button"

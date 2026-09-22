@@ -116,7 +116,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
                       Certified Arboriculture
                     </div>
                     <div className="text-sm font-bold text-[#0A2616]">
-                      Full Liability &amp; Property Protection
+                      Full Liability & Property Protection
                     </div>
                   </div>
                 </div>

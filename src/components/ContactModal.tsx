@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { X, CheckCircle2, Phone, Mail, ArrowRight, ShieldCheck } from "lucide-react";
 
 interface ContactModalProps {
@@ -26,6 +26,28 @@ export default function ContactModal({ isOpen, onClose, initialSubject = "" }: C
     }
   }, [initialSubject]);
 
+  // Escape key handler
+  const handleEscapeKey = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsSubmitted(false);
+        onClose();
+      }
+    },
+    [onClose]
+  );
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener("keydown", handleEscapeKey);
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.removeEventListener("keydown", handleEscapeKey);
+      document.body.style.overflow = "";
+    };
+  }, [isOpen, handleEscapeKey]);
+
   if (!isOpen) return null;
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -39,7 +61,13 @@ export default function ContactModal({ isOpen, onClose, initialSubject = "" }: C
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 overflow-y-auto">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 overflow-y-auto"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Contact Our Team"
+      onClick={(e) => { if (e.target === e.currentTarget) handleClose(); }}
+    >
       <div className="bg-[var(--bg-card)] text-[var(--text-charcoal)] w-full max-w-xl rounded-sm shadow-2xl overflow-hidden relative my-8 border border-stone-200">
         {/* Header */}
         <div className="bg-[var(--corporate-green)] text-white p-6 sm:p-7 flex items-center justify-between hover:bg-[#1E6B3E]">
@@ -144,11 +172,11 @@ export default function ContactModal({ isOpen, onClose, initialSubject = "" }: C
                     onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
                     className="w-full bg-[var(--bg-canvas)] border-2 border-stone-300 p-3 text-base rounded-sm focus:border-[var(--corporate-green)] focus:bg-[var(--bg-card)] focus:outline-none"
                   >
-                    <option value="Tree Care & Pruning">Tree Care &amp; Pruning</option>
+                    <option value="Tree Care & Pruning">Tree Care & Pruning</option>
                     <option value="Landscape Maintenance">Landscape Maintenance</option>
                     <option value="Commercial Grounds Care">Commercial Grounds Care</option>
                     <option value="Residential Property Care">Residential Property Care</option>
-                    <option value="Storm & Emergency Assistance">Storm &amp; Emergency Assistance</option>
+                    <option value="Storm & Emergency Assistance">Storm & Emergency Assistance</option>
                   </select>
                 </div>
               </div>
