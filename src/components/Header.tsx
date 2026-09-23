@@ -103,8 +103,8 @@ export default function Header({ onOpenContact }: HeaderProps) {
                 aria-expanded={activeMegaMenu}
                 aria-haspopup="true"
                 className={`px-4 py-2 rounded-sm flex items-center space-x-1.5 transition-all duration-200 ${activeMegaMenu
-                    ? "bg-[#F4FAF6] text-[var(--corporate-green)]"
-                    : "hover:bg-[#F4FAF6] hover:text-[var(--corporate-green)]"
+                  ? "bg-[#F4FAF6] text-[var(--corporate-green)]"
+                  : "hover:bg-[#F4FAF6] hover:text-[var(--corporate-green)]"
                   }`}
               >
                 <span>Services</span>

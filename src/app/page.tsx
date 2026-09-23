@@ -5,11 +5,11 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ServicesSection from "@/components/ServicesSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import IndustryHighlights from "@/components/IndustryHighlights";
 import CommercialSection from "@/components/CommercialSection";
 import ResidentialSection from "@/components/ResidentialSection";
 import Portfolio from "@/components/Portfolio";
 import AboutSection from "@/components/AboutSection";
-import ServiceArea from "@/components/ServiceArea";
 import Resources from "@/components/Resources";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -37,6 +37,9 @@ export default function HomePage() {
 
       {/* Why Choose Us / Proof Points */}
       <WhyChooseUs />
+
+      {/* Industry-Specific Feature Highlights */}
+      <IndustryHighlights onOpenContact={handleOpenContact} />
 
       {/* Commercial Grounds Section */}
       <CommercialSection onOpenContact={handleOpenContact} />

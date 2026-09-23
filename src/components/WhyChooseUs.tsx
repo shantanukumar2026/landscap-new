@@ -73,7 +73,7 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={index}
-                className="bg-[var(--bg-offwhite)] border border-stone-200 p-6 sm:p-7 rounded-sm flex flex-col justify-between hover:border-[var(--corporate-green)] transition-colors"
+                className="bg-[var(--bg-canvas)] border border-stone-200 p-6 sm:p-7 rounded-sm flex flex-col justify-between hover:border-[var(--corporate-green)] transition-colors"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
